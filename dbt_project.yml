@@ -1,0 +1,15 @@
+name: 'dbt_snowflake_repo'
+version: '1.0.0'
+config-version: 2
+profile: 'dbt_snowflake_repo'
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+models:
+  dbt_snowflake_repo:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
