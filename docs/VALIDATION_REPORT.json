@@ -1,0 +1,90 @@
+{
+  "run_id": "8d61e2b3-f385-4f7e-a993-222c49fd3836",
+  "results": [
+    {
+      "path": "models/marts/schema_setup.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/marts/data_quality_checks.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/marts/dim_customers.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": [
+        {
+          "issue": "GETDATE() should be CURRENT_TIMESTAMP()",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "path": "models/marts/dim_products.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/marts/fct_daily_revenue.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/marts/fct_orders.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/staging/stg_raw_customers.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/staging/stg_raw_events.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/staging/stg_raw_orders.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/staging/stg_raw_products.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/intermediate/int_customer_sessions.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": []
+    },
+    {
+      "path": "models/intermediate/int_order_items.sql",
+      "status": "VALID",
+      "is_valid": true,
+      "issues": [
+        {
+          "issue": "GETDATE() should be CURRENT_TIMESTAMP()",
+          "severity": "WARNING"
+        }
+      ]
+    }
+  ],
+  "valid_count": 12,
+  "invalid_count": 0,
+  "total_count": 12
+}
